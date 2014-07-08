@@ -1,0 +1,5 @@
+.idea
+target
+*.iml
+/xlog-android/target
+/xlog-android/*.iml
