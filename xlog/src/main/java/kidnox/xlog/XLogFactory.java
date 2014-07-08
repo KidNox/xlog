@@ -1,6 +1,7 @@
 package kidnox.xlog;
 
 import java.io.PrintStream;
+import java.util.Arrays;
 
 import static kidnox.xlog.LogAdapter.Level.*;
 
@@ -65,16 +66,24 @@ public class XLogFactory {
             this.level = logger.getLogLevel().ordinal();
         }
 
-        @Override public void trace(String message) {
-            log(TRACE, message);
+        @Override public void trace(Object message) {
+            log(TRACE, String.valueOf(message));
+        }
+
+        @Override public void trace(Object... message) {
+            log(TRACE, Arrays.toString(message));
         }
 
         @Override public void trace(String message, Object... args) {
             log(TRACE, logger.format(message, args));
         }
 
-        @Override public void debug(String message) {
-            log(DEBUG, message);
+        @Override public void debug(Object message) {
+            log(DEBUG, String.valueOf(message));
+        }
+
+        @Override public void debug(Object... message) {
+            log(DEBUG, Arrays.toString(message));
         }
 
         @Override public void debug(String message, Object... args) {
@@ -89,8 +98,12 @@ public class XLogFactory {
             log(DEBUG, logger.format(message, args), t);
         }
 
-        @Override public void info(String message) {
-            log(INFO, message);
+        @Override public void info(Object message) {
+            log(INFO, String.valueOf(message));
+        }
+
+        @Override public void info(Object... message) {
+            log(INFO, Arrays.toString(message));
         }
 
         @Override public void info(String message, Object... args) {

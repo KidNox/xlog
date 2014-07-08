@@ -3,15 +3,18 @@ package kidnox.xlog;
 
 public interface XLog {
 
-    public void trace(String message);
+    public void trace(Object message);
+    public void trace(Object... message);
     public void trace(String message, Object... args);
 
-    public void debug(String message);
+    public void debug(Object message);
+    public void debug(Object... message);
     public void debug(String message, Object... args);
     public void debug(Throwable t, String message);
     public void debug(Throwable t, String message, Object... args);
 
-    public void info(String message);
+    public void info(Object message);
+    public void info(Object... message);
     public void info(String message, Object... args);
     public void info(Throwable t, String message);
     public void info(Throwable t, String message, Object... args);

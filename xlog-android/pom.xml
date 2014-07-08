@@ -6,7 +6,7 @@
 
     <groupId>com.kidnox</groupId>
     <artifactId>xlog-android</artifactId>
-    <version>0.5</version>
+    <version>0.6</version>
 
     <licenses>
         <license>
@@ -95,7 +95,7 @@
         <dependency>
             <groupId>com.kidnox</groupId>
             <artifactId>xlog</artifactId>
-            <version>[0.5,)</version>
+            <version>0.6</version>
         </dependency>
     </dependencies>
 

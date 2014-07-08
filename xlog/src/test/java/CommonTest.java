@@ -16,6 +16,10 @@ public class CommonTest {
 
         xLog.wtf(throwAndCatch());
 
+        xLog.trace("trace");
+        xLog.debug(new Object());
+        xLog.info(new Object(), null, "debug");
+
     }
 
     Throwable throwAndCatch() {
